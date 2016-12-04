@@ -3,9 +3,9 @@
 
     <!-- Manifest stuff -->
     <string name="app_name">OpenTasks</string>
-    <string name="permission_read_tasks">read tasks</string>
+    <string name="permission_read_tasks">Read Tasks</string>
     <string name="permission_description_read_tasks">Read tasks and task lists.</string>
-    <string name="permission_write_tasks">write tasks</string>
+    <string name="permission_write_tasks">Write Tasks</string>
     <string name="permission_description_write_tasks">Create, modify and delete tasks and task lists.</string>
 
     <!-- Task list -->
@@ -22,13 +22,13 @@
     <string name="toast_task_uncompleted">\"%1s\" reopened.</string>
     <string name="toast_x_removed">\"%1s\" removed.</string>
     <string name="task_group_title_list">Tasks</string>
-    <string name="task_group_title_start">Tasks starting</string>
-    <string name="task_group_title_due">Tasks due</string>
-    <string name="task_group_title_priority">Task priority</string>
-    <string name="task_group_title_progress">Task progress</string>
+    <string name="task_group_title_start">Tasks Starting</string>
+    <string name="task_group_title_due">Tasks Due</string>
+    <string name="task_group_title_priority">Task Priority</string>
+    <string name="task_group_title_progress">Task Progress</string>
     <string name="task_group_title_default">Tasks</string>
-    <string name="quick_add_task_created">Task created</string>
-    <string name="initial_local_task_list_name">My tasks</string>
+    <string name="quick_add_task_created">Task Created</string>
+    <string name="initial_local_task_list_name">My Tasks</string>
 
     <plurals name="number_of_tasks">
         <item quantity="one">%d task</item>
@@ -108,17 +108,17 @@
     <string name="task_group_progress_title">Progress</string>
 
     <!-- Task list progress group titles -->
-    <string name="task_group_progress_0">Nothing accomplished</string>
-    <string name="task_group_progress_40">Way to go</string>
-    <string name="task_group_progress_60">Halfway there</string>
-    <string name="task_group_progress_80">Almost done</string>
+    <string name="task_group_progress_0">Nothing Accomplished</string>
+    <string name="task_group_progress_40">Way To Go</string>
+    <string name="task_group_progress_60">Halfway There</string>
+    <string name="task_group_progress_80">Almost Done</string>
     <string name="task_group_progress_100">Done</string>
 
     <!-- Task list priority group titles -->
-    <string name="task_group_priority_high">High priority</string>
-    <string name="task_group_priority_medium">Medium priority</string>
-    <string name="task_group_priority_low">Low priority</string>
-    <string name="task_group_priority_none">No priority</string>
+    <string name="task_group_priority_high">High Priority</string>
+    <string name="task_group_priority_medium">Medium Priority</string>
+    <string name="task_group_priority_low">Low Priority</string>
+    <string name="task_group_priority_none">No Priority</string>
 
     <!-- Task editor labels -->
 
@@ -128,26 +128,26 @@
 
     <!-- Status labels -->
 
-    <string name="status_needs_action">needs action</string>
-    <string name="status_in_process">in process</string>
-    <string name="status_completed">done</string>
-    <string name="status_cancelled">cancelled</string>
-    <string name="status_incomplete">incomplete</string>
+    <string name="status_needs_action">Needs Action</string>
+    <string name="status_in_process">In Process</string>
+    <string name="status_completed">Done</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_incomplete">Incomplete</string>
 
     <!-- Classification labels -->
 
-    <string name="classification_not_specified">not specified</string>
-    <string name="classification_public">public</string>
-    <string name="classification_private">private</string>
-    <string name="classification_confidential">confidential</string>
+    <string name="classification_not_specified">Not Specified</string>
+    <string name="classification_public">Public</string>
+    <string name="classification_private">Private</string>
+    <string name="classification_confidential">Confidential</string>
 
     <!-- Priority labels -->
 
-    <string name="priority_undefined">none</string>
-    <string name="priority_low">low</string>
-    <string name="priority_medium">medium</string>
-    <string name="priority_high">high</string>
-    <string name="priority_urgent">urgent</string>
+    <string name="priority_undefined">None</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+    <string name="priority_urgent">Urgent</string>
 
     <!-- Label for Settings -->
 
@@ -163,8 +163,8 @@
 
     <!-- manage task list activity -->
 
-    <string name="activity_manage_list_btn_save">save</string>
-    <string name="activity_manage_list_btn_delete">delete list</string>
+    <string name="activity_manage_list_btn_save">Save</string>
+    <string name="activity_manage_list_btn_delete">Delete List</string>
     <string name="activity_add_list_title">Create local list</string>
     <string name="activity_edit_list_title">List settings</string>
     <string name="task_list_name_caption">Name</string>
