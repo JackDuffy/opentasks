@@ -8,7 +8,8 @@
         android:id="@android:id/text1"
         style="@style/field_editor_text_value"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|text">
     </EditText>
 
 </org.dmfs.tasks.widget.TextFieldEditor>
