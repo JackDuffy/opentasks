@@ -680,7 +680,9 @@ public class EditTaskFragment extends SupportFragment implements LoaderManager.L
 
 			int newColor = getBlendColor(mListColor, darkenColor(mListColor), (int) ((0.5 + 0.5 * percentage) * 255));
 			ActionBar actionBar = ((ActionBarActivity) getActivity()).getSupportActionBar();
-			actionBar.setBackgroundDrawable(new ColorDrawable(newColor));
+			if (actionBar != null) {
+				actionBar.setBackgroundDrawable(new ColorDrawable(newColor));
+			}
 
 			// this is a workaround to ensure the new color is applied on all devices, some devices show a transparent ActionBar if we don't do that.
 			actionBar.setDisplayShowTitleEnabled(false);

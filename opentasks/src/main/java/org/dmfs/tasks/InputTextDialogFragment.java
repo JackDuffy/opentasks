@@ -107,7 +107,7 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
      * 
      * @param title
      *            The title of the dialog.
-     * @param message
+     * @param initalText
      *            The text of the message field.
      * @param hint
      *            The hint of the input field.
@@ -124,7 +124,7 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
      * 
      * @param title
      *            The title of the dialog.
-     * @param message
+     * @param hint
      *            The text of the message field.
      * @return A new {@link InputTextDialogFragment}.
      */
@@ -166,6 +166,10 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
         {
             mEditText.setHint(mHint);
         }
+        if (savedInstanceState.getBoolean("EDIT_TEXT_HAS_FOCUS")) {
+            mEditText.requestFocus();
+            getDialog().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_UNCHANGED);
+        }
         if (mMessage != null)
         {
             TextView mMessageView = (TextView) view.findViewById(android.R.id.message);
@@ -174,8 +178,8 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
         }
         ((TextView) view.findViewById(android.R.id.title)).setText(mTitle);
 
-        mEditText.requestFocus();
-        getDialog().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        //mEditText.requestFocus();
+        //getDialog().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_UNCHANGED);
         mEditText.setOnEditorActionListener(this);
 
         view.findViewById(android.R.id.button1).setOnClickListener(new OnClickListener()
@@ -264,6 +268,15 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
     {
         super.onCancel(dialog);
         handleCancel();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+
+        if (mEditText.hasFocus()) {
+            bundle.putBoolean("EDIT_TEXT_HAS_FOCUS", true);
+        }
     }
 
     @Override

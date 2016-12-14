@@ -26,7 +26,7 @@ import org.dmfs.tasks.R;
 import org.dmfs.tasks.model.adapters.BooleanFieldAdapter;
 import org.dmfs.tasks.model.adapters.FieldAdapter;
 import org.dmfs.tasks.model.adapters.StringFieldAdapter;
-import org.dmfs.tasks.model.contraints.UpdateAllDay;
+import org.dmfs.tasks.model.constraints.UpdateAllDay;
 import org.dmfs.tasks.model.layout.LayoutDescriptor;
 import org.dmfs.xmlobjects.ElementDescriptor;
 import org.dmfs.xmlobjects.QualifiedName;
@@ -180,7 +180,7 @@ public class XmlModel extends Model
 						}
 						else if ("description".equals(datakind.datakind) && !datakind.hideCheckList)
 						{
-							Log.i(TAG, "found old description data kind, adding checklist");
+							System.out.println(TAG + "found old description data kind");
 							object.addField(FIELD_INFLATER_MAP.get("checklist").inflate(appContext, object.mModelContext, datakind));
 						}
 					}

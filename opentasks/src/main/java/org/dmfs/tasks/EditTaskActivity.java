@@ -25,13 +25,16 @@ import org.dmfs.tasks.model.ContentSet;
 import org.dmfs.tasks.utils.ActionBarActivity;
 
 import android.annotation.TargetApi;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 /**
@@ -186,10 +189,18 @@ public class EditTaskActivity extends ActionBarActivity
 	@Override
 	public void onBackPressed()
 	{
-		super.onBackPressed();
-
 		if (mEditFragment != null)
 		{
+			new AlertDialog.Builder(this)
+					.setTitle("Are you sure?")
+					.setMessage("Your task will be saved in its current state unless you click No")
+					.setNegativeButton(android.R.string.no, null)
+					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialogInterface, int integer) {
+							EditTaskActivity.this.onBackPressed();
+						}
+					}).create().show();
 			mEditFragment.saveAndExit();
 		}
 	}
