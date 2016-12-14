@@ -198,7 +198,7 @@
     </style>
 
     <style name="widget_header_divider">
-        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:background">@android:color/white</item>
     </style>
 
     <style name="task_list_progress_background">

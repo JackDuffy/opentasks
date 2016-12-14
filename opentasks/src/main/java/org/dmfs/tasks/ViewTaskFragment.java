@@ -609,8 +609,9 @@ public class ViewTaskFragment extends SupportFragment implements OnModelLoadedLi
 	 */
 	private void completeTask()
 	{
-		TaskFieldAdapters.STATUS.set(mContentSet, Tasks.STATUS_COMPLETED);
 		TaskFieldAdapters.PINNED.set(mContentSet, false);
+		TaskFieldAdapters.STATUS.set(mContentSet, Tasks.STATUS_COMPLETED);
+
 		persistTask();
 		Snackbar.make(getActivity().getWindow().getDecorView(), getString(R.string.toast_task_completed, TaskFieldAdapters.TITLE.get(mContentSet)),
 			Snackbar.LENGTH_SHORT).show();
