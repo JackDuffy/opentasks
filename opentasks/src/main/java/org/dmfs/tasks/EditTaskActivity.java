@@ -189,18 +189,9 @@ public class EditTaskActivity extends ActionBarActivity
 	@Override
 	public void onBackPressed()
 	{
+		super.onBackPressed();
 		if (mEditFragment != null)
 		{
-			new AlertDialog.Builder(this)
-					.setTitle("Are you sure?")
-					.setMessage("Your task will be saved in its current state unless you click No")
-					.setNegativeButton(android.R.string.no, null)
-					.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialogInterface, int integer) {
-							EditTaskActivity.this.onBackPressed();
-						}
-					}).create().show();
 			mEditFragment.saveAndExit();
 		}
 	}
